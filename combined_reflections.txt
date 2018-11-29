@@ -1,0 +1,85 @@
+
+Testing: working directory------>staging area ----------->repo (which as many commits)
+
+What happens when you initialize a repository? Why do you need to do it?
+1.go to my_directory: cd my_directory
+2.double check whether a repository already exist: ls -a
+3. in case you do not see a file call '.git' meaning no repo exists yet, creat a repository for that directory: git init
+4. to check the repo status: git status
+
+ 
+How is the staging area different from the working directory and the repository?
+What value do you think it offers?
+Staging area is a temperature place to store changes in a repo, when you commit those changes it will be gone, no longer consuming storage. The files in working directory will be there until you delete the directory and the files within it; and you need to move the completed files to your 'completed directory' in order to complete the updates. The repository holds all the records of the past committed files.
+
+How can you use the staging area to make sure you have one commit per logical
+change?
+
+What are some situations when branches would be helpful in keeping your history
+organized? How would branches help?
+
+How do the diagrams help you visualize the branch structure?
+
+What is the result of merging two branches together? Why do we represent it in
+the diagram the way we do?
+
+What are the pros and cons of Git's automatic merging vs. always doing merges
+manually?
+
+11-05-2018
+Q: how version control increase my confidence of making mistake will NOT break my code?
+A: simple! go back to the previous version before the bug was introduced by
+>git checkout commit-number-of-previous-version
+
+
+Q:What are the strange error message git would produce?
+"you are in a detached HEAD state"
+HEAD state: the current commit you are on
+detached HEAD state: when you leave the current commit state and go to the previous commit
+
+"Should not be doing an octupus"
+octupus: the git strategy/operation that combines many different codes
+
+"Panic!(the 'impossible' happen)"
+some suprising errors occur
+
+Q:How to edit a text file on mac terminal?
+A: Example
+pico my_file.txt
+
+Q:How to view the previous commits?
+A: 1) on terminal, go to the desired repo. Exp: cd version-control-udacity/my-repo
+2)> git log, scroll down the history by clicking ENTER, to end the viewing, enter 'q' and ENTER
+3) find the interested commit and the one you want to compare with (such as its previous one, which is the one record down)
+>git diff commit-number1 commit-number2 
+
+Q: What is the 'diff' command on Mac OR 'FC'(File Compare) in Window? What benifits does it bring to the table?
+diff -u file1 file2
+
+to compare file1 (as the baseline/reference) and file2 line by line, resulting  3 types of outcome:
+1)'  this is the common line from file 1 and file 2'
+2)'- this line only appear in file 1 but not file 2'
+3)'+ this line only appear in file 2 but not file 1'
+
+-u is for the same of nice output.
+
+Example:
+cd Download
+diff -u game_new.html game_old.html
+
+Benifits:
+1) it make comparing two big files (with hundreds even thousands of lines) easy
+2) pinpoint the common and the difference, so that it filter out the important points
+
+Q: How do you see that easy access to the entire history of a file make you a more efficent programmer in long run?
+A: 
+1) It allows me to "see" the before and after, highlighting my change of thoughts, reinforing my learning
+2) It gives me a place to reflect, connecting points which I have not known they are relative
+3) It rewards me emtionally: look how much progress I have made today! I am confident about the future!
+
+Q: what is the pro and con for manually save the change (creating a commit in git), vs have the changes automatically saved,
+like google docs?
+A: manually saving the change PRO: the user can chooose the save limited a logically change; CON: forget to save the change and lost the works ):
+
+Q: why do some version control, like git, allow saving multiple file at one commit, while some others only allowing saving files seperately?
+A: git assume that the files in a repository are interconnected, thus save them at one commit; while other version control systems such as Google Docs do not have that assumption and thus treat file seperately.
