@@ -7,6 +7,7 @@ What happens when you initialize a repository? Why do you need to do it?
  
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
+Staging area is a temperature place to store changes in a repo, when you commit those changes it will be gone, no longer consuming storage. The files in working directory will be there until you delete the directory and the files within it; and you need to move the completed files to your 'completed directory' in order to complete the updates. The repository holds all the records of the past committed files.
 
 How can you use the staging area to make sure you have one commit per logical
 change?
