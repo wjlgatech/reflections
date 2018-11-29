@@ -1,3 +1,6 @@
+
+Testing: working directory------>staging area ----------->repo (which as many commits)
+
 What happens when you initialize a repository? Why do you need to do it?
 1.go to my_directory: cd my_directory
 2.double check whether a repository already exist: ls -a
