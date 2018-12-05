@@ -1,29 +1,34 @@
 When would you want to use a remote repository rather than keeping all your work
 local?
 
-    Fill in your answer here
+    *when I want to cooperate with other people: the team need a common place to store files and do version control. One of this place GitHub.
 
 Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
 
-    Fill in your answer here
+    *There could be couple occasions I do not want my local Git automatically syn with the remote GitHub: 1) some changes I may want to keep them to myself and not sharing it with others in the remote repository. 2) the remote GitHub is the production code, my local Git is the experimental version which I want to wait until it become mature to push it up to GitHub.
 
 Describe the differences between forks, clones, and branches.  When would you
 use one instead of another?
 
-    Fill in your answer here
+    *fork, clone and branch all bring new changes without affecting existing version. With branching, two updated commits have the common parent commit, all within the same repository.
+Both forking and cloning copy a repository to a new location.
+
+fork: copy a GitHub repository into another location on GitHub.
+
+Clone: copy a Git repository to new location you have access to, either git or GitHub; or copy a GitHub repository to the Git of a local computer.
 
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
-    Fill in your answer here
+    When I go without internet for a while, says flying, I make a copy of the latest version of the remote to my local computer (git fetch origin/master). If I am not ready to merge my branch with this most updated remote version, that is fine, I wait until I am ready to merge my branch while offline (git merge master origin/master).
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
 
-    Fill in your answer here
+    If without using Git or GitHub, I will use a google document and grant my collaborators right to edit. But the google doc will not keep the history of changes and could make the collaboration confusing. Using Git and GitHub keep all the commit history and make collaboration easier.
 
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
-    Fill in your answer here
+	the master branch is usually the production quality branch while a separate branch is usually experimental, such as adding a new feature. Only when the work in the separate branch is ready, we merge that separate branch into the master branch. Two benefits: 1) make sure the master branch is always on highest quality for production. 2) many experimental features can be working in parallel without altering the working master branch.
